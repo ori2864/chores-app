@@ -12,6 +12,7 @@ public class ResponsibleService {
     public void addResponsible(Responsible resp){
         responsibleRepo.save(resp);
     }
+    //micro-service to get responsible from repository
     public Responsible getResponsible(Integer id) throws Exception {
         if (responsibleRepo.findById(id).isPresent()){
             return responsibleRepo.findById(id).get();
